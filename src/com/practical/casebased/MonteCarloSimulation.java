@@ -1,7 +1,10 @@
 package com.practical.casebased;
+
 import java.util.Random;
+
 class Probability {
 	public static final int THROWS = 1000000;
+
 	int simulateProcess() {
 		int count = 0;
 		Random random = new Random();
@@ -14,10 +17,12 @@ class Probability {
 		}
 		return count;
 	}
+
 	double findProbability() {
 		int favourable = simulateProcess();
-		return ((double)favourable) / THROWS;
+		return ((double) favourable) / THROWS;
 	}
+
 	boolean isOddNumberedRegion(double x, double y) {
 		if (x < 0 || (x > 0 && y > 0 && x + y < 1)) {
 			return true;
@@ -26,9 +31,11 @@ class Probability {
 		}
 	}
 }
+
 public class MonteCarloSimulation {
 	public static void main(String[] args) {
 		Probability probable = new Probability();
-		System.out.println("Probability for a dart to fall into an odd numbered region = " + probable.findProbability());
+		System.out
+				.println("Probability for a dart to fall into an odd numbered region = " + probable.findProbability());
 	}
 }

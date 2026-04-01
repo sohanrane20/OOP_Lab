@@ -1,42 +1,39 @@
 package com.practical.lab5;
+
 import java.util.Scanner;
-abstract class Fruit
-{
+
+abstract class Fruit {
 	protected String name;
 	protected boolean isBunch;
 	protected float price;
-	Fruit(String name, boolean isBunch, float price)
-	{
+
+	Fruit(String name, boolean isBunch, float price) {
 		this.name = name;
 		this.isBunch = isBunch;
 		this.price = price;
 	}
+
 	abstract void displayFruit();
 }
-class FruitInformation extends Fruit
-{
-	FruitInformation(String name, boolean isBunch, float price)
-	{
+
+class FruitInformation extends Fruit {
+	FruitInformation(String name, boolean isBunch, float price) {
 		super(name, isBunch, price);
 	}
-	void displayFruit()
-	{
+
+	void displayFruit() {
 		System.out.println("Name is " + name);
-		if (isBunch)
-		{
+		if (isBunch) {
 			System.out.println("Bunch fruit");
-		}
-		else
-		{
+		} else {
 			System.out.println("Single fruit");
 		}
 		System.out.println("Price is " + price);
 	}
 }
-public class DisplayFruit 
-{
-	public static void main(String[] args)
-	{
+
+public class DisplayFruit {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		String name;
 		boolean isBunch;
@@ -44,8 +41,7 @@ public class DisplayFruit
 		char choice;
 		System.out.print("Enter name of the fruit: ");
 		name = input.nextLine();
-		do
-		{
+		do {
 			System.out.print("Is it a bunch fruit? (Y / N) ");
 			choice = input.nextLine().toUpperCase().charAt(0);
 		} while (choice != 'Y' && choice != 'N');

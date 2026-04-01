@@ -1,37 +1,37 @@
 package com.practical.lab7;
+
 import java.util.Scanner;
-interface SimpleInterest
-{
+
+interface SimpleInterest {
 	public abstract float calculateSimpleInterest();
 }
-interface Account extends SimpleInterest
-{
+
+interface Account extends SimpleInterest {
 	public abstract float calculateAggregateBalance();
 }
-class SavingsAccount implements Account
-{
+
+class SavingsAccount implements Account {
 	private int principal, time;
 	private float rate;
-	SavingsAccount(int principal, float rate, int time)
-	{
+
+	SavingsAccount(int principal, float rate, int time) {
 		this.principal = principal;
 		this.rate = rate;
 		this.time = time;
 	}
-	public float calculateSimpleInterest()
-	{
-		return (float)principal * ((float)time / 12) * (rate / 100.0f);
+
+	public float calculateSimpleInterest() {
+		return (float) principal * ((float) time / 12) * (rate / 100.0f);
 	}
-	public float calculateAggregateBalance()
-	{
+
+	public float calculateAggregateBalance() {
 		float interest = calculateSimpleInterest();
-		return (float)principal + interest;
+		return (float) principal + interest;
 	}
 }
-public class SimpleInterestCalculator 
-{
-	public static void main(String[] args)
-	{
+
+public class SimpleInterestCalculator {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int principal, time;
 		float rate;

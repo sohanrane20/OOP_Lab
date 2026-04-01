@@ -1,34 +1,33 @@
 package com.practical.lab2;
+
 import java.util.Scanner;
-class GasMileage
-{
+
+class GasMileage {
 	float miles, gallons;
 	static float totalMiles, totalGallons;
-	GasMileage(float miles, float gallons)
-	{
+
+	GasMileage(float miles, float gallons) {
 		this.miles = miles;
 		this.gallons = gallons;
 	}
-	float calculateMilesPerGallon()
-	{
+
+	float calculateMilesPerGallon() {
 		return miles / gallons;
 	}
-	static float calculateCombinedMilesPerGallon()
-	{
+
+	static float calculateCombinedMilesPerGallon() {
 		return totalMiles / totalGallons;
 	}
 }
-public class CalculateGasMileage 
-{
-	public static void main(String[] args)
-	{
+
+public class CalculateGasMileage {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int i;
 		char another;
 		float miles, gallons;
 		i = 1;
-		do
-		{
+		do {
 			System.out.println("Trip " + i);
 			System.out.print("Enter miles: ");
 			miles = input.nextFloat();
@@ -38,7 +37,8 @@ public class CalculateGasMileage
 			System.out.println("Miles per gallon for trip " + i + " is " + gasMileage.calculateMilesPerGallon());
 			GasMileage.totalMiles += miles;
 			GasMileage.totalGallons += gallons;
-			System.out.println("Combined miles per gallon upto this point is " + GasMileage.calculateCombinedMilesPerGallon());
+			System.out.println(
+					"Combined miles per gallon upto this point is " + GasMileage.calculateCombinedMilesPerGallon());
 			i++;
 			System.out.print("Do you want to continue? (Y/N) ");
 			input.nextLine();

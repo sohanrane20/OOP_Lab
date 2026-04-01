@@ -1,10 +1,11 @@
 package com.practical.lab2;
+
 import java.util.Scanner;
-class GarageCharges
-{
+
+class GarageCharges {
 	int hours;
-	float calculateCharges()
-	{
+
+	float calculateCharges() {
 		float charges = 0.0f;
 		if (hours <= 3)
 			charges = 2.0f;
@@ -15,10 +16,9 @@ class GarageCharges
 		return charges;
 	}
 }
-public class CalculateGarageCharges 
-{
-	public static void main(String[] args)
-	{
+
+public class CalculateGarageCharges {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		GarageCharges garageCharges = new GarageCharges();
 		System.out.print("Enter number of hours: ");

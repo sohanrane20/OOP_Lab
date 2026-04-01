@@ -1,15 +1,19 @@
 package com.practical.lab7;
+
 import java.util.Scanner;
+
 class Course {
 	private int id;
 	private float duration, fees;
 	String description;
+
 	Course(int id, String description, float duration, float fees) {
 		this.id = id;
 		this.description = description;
 		this.duration = duration;
 		this.fees = fees;
 	}
+
 	void getData() {
 		System.out.println("ID = " + id);
 		System.out.println("Description = " + description);
@@ -17,6 +21,7 @@ class Course {
 		System.out.println("Fees = " + fees + " rupees");
 	}
 }
+
 public class CourseManager {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

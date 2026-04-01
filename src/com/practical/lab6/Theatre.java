@@ -1,42 +1,44 @@
 package com.practical.lab6;
+
 import java.util.Scanner;
-interface Income
-{
+
+interface Income {
 	public static final float CUSTOMER = 5.0f;
+
 	public abstract double calculateIncome();
 }
-interface Expenses
-{
+
+interface Expenses {
 	public static final double PERFORMANCE = 20;
 	public static final float ATTENDEE = 0.5f;
+
 	public abstract double calculateExpenses();
 }
-class TotalProfit implements Income, Expenses
-{
+
+class TotalProfit implements Income, Expenses {
 	int numberOfCustomers, numberOfPerformances;
-	TotalProfit(int numberOfCustomers, int numberOfPerformances)
-	{
+
+	TotalProfit(int numberOfCustomers, int numberOfPerformances) {
 		this.numberOfCustomers = numberOfCustomers;
 		this.numberOfPerformances = numberOfPerformances;
 	}
-	public double calculateIncome()
-	{
-		return (double)CUSTOMER * numberOfCustomers;
+
+	public double calculateIncome() {
+		return (double) CUSTOMER * numberOfCustomers;
 	}
-	public double calculateExpenses()
-	{
-		return PERFORMANCE * numberOfPerformances + (double)ATTENDEE * numberOfCustomers;
+
+	public double calculateExpenses() {
+		return PERFORMANCE * numberOfPerformances + (double) ATTENDEE * numberOfCustomers;
 	}
-	double calculateProfit()
-	{
+
+	double calculateProfit() {
 		double income = calculateIncome(), expenses = calculateExpenses();
 		return income - expenses;
 	}
 }
-public class Theatre 
-{
-	public static void main(String[] args)
-	{
+
+public class Theatre {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		System.out.print("Enter number of customers: ");
 		int numberOfCustomers = input.nextInt();

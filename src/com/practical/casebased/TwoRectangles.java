@@ -1,7 +1,10 @@
 package com.practical.casebased;
+
 import java.util.Scanner;
+
 class Rectangle {
 	float x, y, width, height, top, bottom, left, right;
+
 	Rectangle(float x, float y, float width, float height) {
 		this.x = x;
 		this.y = y;
@@ -12,6 +15,7 @@ class Rectangle {
 		left = x - width / 2;
 		right = x + width / 2;
 	}
+
 	static void check(Rectangle r1, Rectangle r2) {
 		if (r2.top <= r1.top && r2.bottom >= r1.bottom && r2.left >= r1.left && r2.right <= r1.right) {
 			System.out.println("Rectangle 2 is inside rectangle 1");
@@ -22,6 +26,7 @@ class Rectangle {
 		}
 	}
 }
+
 public class TwoRectangles {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

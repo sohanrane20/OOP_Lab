@@ -1,22 +1,29 @@
 package com.practical.casebased;
+
 import java.util.Scanner;
+
 abstract class Physics {
 	protected float initialVelocity, finalVelocity, time;
+
 	abstract float calculate();
+
 	Physics(float initialVelocity, float finalVelocity, float time) {
 		this.initialVelocity = initialVelocity;
 		this.finalVelocity = finalVelocity;
 		this.time = time;
 	}
 }
+
 class AverageAcceleration extends Physics {
 	AverageAcceleration(float initialVelocity, float finalVelocity, float time) {
 		super(initialVelocity, finalVelocity, time);
 	}
+
 	float calculate() {
 		return (finalVelocity - initialVelocity) / time;
 	}
 }
+
 public class Acceleration {
 	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);

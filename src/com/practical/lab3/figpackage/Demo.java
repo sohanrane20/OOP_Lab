@@ -1,9 +1,9 @@
 package com.practical.lab3.figpackage;
+
 import java.util.Scanner;
-class Demo 
-{
-	public static void main(String[] args)
-	{
+
+class Demo {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		Cone cone = new Cone();
 		System.out.print("Enter radius of cone: ");

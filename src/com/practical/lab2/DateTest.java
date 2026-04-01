@@ -1,47 +1,47 @@
 package com.practical.lab2;
+
 import java.util.Scanner;
-class Date
-{
+
+class Date {
 	private int day, month, year;
-	Date(int day, int month, int year)
-	{
+
+	Date(int day, int month, int year) {
 		this.day = day;
 		this.month = month;
 		this.year = year;
 	}
-	int getDay()
-	{
+
+	int getDay() {
 		return day;
 	}
-	int getMonth()
-	{
+
+	int getMonth() {
 		return month;
 	}
-	int getYear()
-	{
+
+	int getYear() {
 		return year;
 	}
-	void setDay(int day)
-	{
+
+	void setDay(int day) {
 		this.day = day;
 	}
-	void setMonth(int month)
-	{
+
+	void setMonth(int month) {
 		this.month = month;
 	}
-	void setYear(int year)
-	{
+
+	void setYear(int year) {
 		this.year = year;
 	}
-	void displayDate()
-	{
+
+	void displayDate() {
 		System.out.print(day + "/" + month + "/" + year);
 	}
 }
-public class DateTest 
-{
-	public static void main(String[] args)
-	{
+
+public class DateTest {
+	public static void main(String[] args) {
 		Scanner input = new Scanner(System.in);
 		int day, month, year;
 		System.out.print("Enter day: ");

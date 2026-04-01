@@ -1,50 +1,50 @@
 package com.practical.lab2;
+
 import java.util.Scanner;
-class Employee
-{
+
+class Employee {
 	private String name, lastName;
 	private double monthlySalary;
-	Employee(String name, String lastName, double monthlySalary)
-	{
+
+	Employee(String name, String lastName, double monthlySalary) {
 		this.name = name;
 		this.lastName = lastName;
 		if (monthlySalary > 0)
 			this.monthlySalary = monthlySalary;
 	}
-	String getName()
-	{
+
+	String getName() {
 		return name;
 	}
-	String getLastName()
-	{
+
+	String getLastName() {
 		return lastName;
 	}
-	double getMonthlySalary()
-	{
+
+	double getMonthlySalary() {
 		return monthlySalary;
 	}
-	void setName(String name)
-	{
+
+	void setName(String name) {
 		this.name = name;
 	}
-	void setLastName(String lastName)
-	{
+
+	void setLastName(String lastName) {
 		this.lastName = lastName;
 	}
-	void setMonthlySalary(double monthlySalary)
-	{
+
+	void setMonthlySalary(double monthlySalary) {
 		if (monthlySalary > 0)
 			this.monthlySalary = monthlySalary;
 	}
-	double calculateYearlySalary()
-	{
+
+	double calculateYearlySalary() {
 		return monthlySalary * 12;
 	}
 }
-public class EmployeeTest 
-{
-	public static void main(String[] args)
-	{
+
+public class EmployeeTest {
+	public static void main(String[] args) {
 		String name, lastName;
 		double monthlySalary;
 		Scanner input = new Scanner(System.in);
